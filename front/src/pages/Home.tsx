@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="h-full flex flex-col px-3 sm:px-6 lg:px-8 py-4">
       
-      <div className="mb-4 flex items-center gap-3 text-white shrink-0">
+      <div className="mb-4 px-3 flex items-center gap-3 text-white shrink-0">
         <Library className="w-6 h-6 text-emerald-400" />
         <div>
           <h1 className="text-xl sm:text-2xl font-semibold">
@@ -29,7 +29,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="flex-1 min-h-0 overflow-auto">
+      <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar box-border">
         <BookTable books={filtered} />
       </div>
 

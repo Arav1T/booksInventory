@@ -39,6 +39,8 @@ const BookTable = ({ books }: Props) => {
           md:grid-cols-2
           lg:grid-cols-3
           xl:grid-cols-4
+          p-3
+         
         "
       >
         {books.map((book) => (
@@ -55,6 +57,12 @@ const BookTable = ({ books }: Props) => {
               transition
               p-4
               flex flex-col justify-between
+              hover:bg-green-50
+              hover:scale-[1.02]
+              hover:border-green-500
+              
+              hover:shadow-green-300
+
             "
           >
             <div>
