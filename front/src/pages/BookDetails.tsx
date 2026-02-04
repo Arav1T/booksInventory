@@ -37,7 +37,8 @@ const BookDetails = () => {
       </button>
 
    
-      <div className="bg-white rounded-lg shadow p-4 sm:p-6 max-w-3xl">
+     <div className="flex justify-center items-center">
+       <div className="bg-white rounded-lg shadow p-4 sm:p-6 max-w-3xl ">
         
 
         <div className="flex items-start justify-between gap-4 mb-4">
@@ -87,6 +88,7 @@ const BookDetails = () => {
           </p>
         </div>
       </div>
+     </div>
 
       {editBook && (
         <AddEditBookModal

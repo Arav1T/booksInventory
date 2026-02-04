@@ -1,34 +1,49 @@
-const BookTableSkeleton = ({ rows = 5 }: { rows?: number }) => {
+interface Props {
+  count?: number;
+}
+const BookTableSkeleton = ({ count = 8 }: Props) => {
   return (
-    <>
-      {Array.from({ length: rows }).map((_, i) => (
-        <tr key={i} className="border-t animate-pulse">
-       
-          <td className="p-3">
-            <div className="h-4 w-40 bg-gray-200 rounded" />
-          </td>
+    <div
+      className="
+        grid gap-5
+        grid-cols-1
+        sm:grid-cols-1
+        md:grid-cols-2
+        lg:grid-cols-3
+        xl:grid-cols-4
+      "
+    >
+      {Array.from({ length: count }).map((_, i) => (
+        <div
+          key={i}
+          className="
+            rounded-lg
+            border border-green-200
+            bg-white
+            p-4
+            shadow-sm
+            animate-pulse
+            flex flex-col justify-between
+          "
+        >
+          {/* Title */}
+          <div className="h-5 w-3/4 bg-gray-200 rounded mb-3" />
 
-     
-          <td className="p-3">
-            <div className="h-4 w-32 bg-gray-200 rounded" />
-          </td>
+          {/* Author */}
+          <div className="h-4 w-1/2 bg-gray-200 rounded mb-2" />
 
-      
-          <td className="p-3">
-            <div className="h-4 w-36 bg-gray-200 rounded" />
-          </td>
+          {/* Publisher */}
+          <div className="h-4 w-2/3 bg-gray-200 rounded" />
 
-        
-          <td className="p-3">
-            <div className="flex gap-3">
-              <div className="h-4 w-10 bg-gray-200 rounded" />
-              <div className="h-4 w-10 bg-gray-200 rounded" />
-              <div className="h-4 w-12 bg-gray-200 rounded" />
-            </div>
-          </td>
-        </tr>
+          {/* Actions */}
+          <div className="flex gap-3 mt-4">
+            <div className="h-4 w-10 bg-gray-200 rounded" />
+            <div className="h-4 w-10 bg-gray-200 rounded" />
+            <div className="h-4 w-12 bg-gray-200 rounded" />
+          </div>
+        </div>
       ))}
-    </>
+    </div>
   );
 };
 

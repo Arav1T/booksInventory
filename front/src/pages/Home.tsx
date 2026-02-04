@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Library } from "lucide-react";
 import { useBookStore } from "../store/bookStore";
@@ -15,10 +16,9 @@ const Home = () => {
   );
 
   return (
-    <div className="w-full px-3 sm:px-6 lg:px-8 py-4">
+    <div className="h-full flex flex-col px-3 sm:px-6 lg:px-8 py-4">
       
-     
-      <div className="mb-4 flex items-center gap-3 text-white">
+      <div className="mb-4 flex items-center gap-3 text-white shrink-0">
         <Library className="w-6 h-6 text-emerald-400" />
         <div>
           <h1 className="text-xl sm:text-2xl font-semibold">
@@ -29,10 +29,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-
-     
-      <div className="bg-white rounded-md shadow overflow-x-auto">
-        <BookTable books={filtered}  />
+      <div className="flex-1 min-h-0 overflow-auto">
+        <BookTable books={filtered} />
       </div>
 
     </div>

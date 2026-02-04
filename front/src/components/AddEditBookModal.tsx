@@ -21,10 +21,16 @@ const AddEditBookModal = ({ book, onClose }: Props) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-3">
-     
-      <div className="relative w-full max-w-lg rounded-xl bg-white shadow-lg border border-green-200 animate-scaleIn">
-        
+    
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-3"
+      onClick={onClose}
+    >
+    
+      <div
+        className="relative w-full max-w-lg rounded-xl bg-white shadow-lg border border-green-200 animate-scaleIn"
+        onClick={(e) => e.stopPropagation()}
+      >
       
         <div className="flex items-center justify-between border-b border-green-100 px-5 py-4">
           <h2 className="text-lg sm:text-xl font-semibold text-green-900">
@@ -39,7 +45,7 @@ const AddEditBookModal = ({ book, onClose }: Props) => {
           </button>
         </div>
 
-    
+     
         <div className="px-5 py-4 max-h-[75vh] overflow-y-auto">
           <BookForm initialData={book || null} onSubmit={handleSubmit} />
         </div>
