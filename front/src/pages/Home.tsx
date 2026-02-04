@@ -4,7 +4,7 @@ import { useBookStore } from "../store/bookStore";
 import BookTable from "../components/BookTable";
 
 const Home = () => {
-  const { books, getBooks, loading, search } = useBookStore();
+  const { books, getBooks, search } = useBookStore();
 
   useEffect(() => {
     getBooks();
