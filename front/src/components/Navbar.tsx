@@ -8,7 +8,7 @@ const Navbar = () => {
   const { setSearch } = useBookStore();
 
   return (
-    <nav className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-800">
+    <nav className="sticky top-0 z-50 bg-linear-to-r from-slate-900 via-emerald-900 to-teal-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           
